@@ -1,23 +1,34 @@
-main .mainArticle .advertisement ul {
+main .mainArticle .advertisement ul,
+main .rightAside ul {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
-main .mainArticle .advertisement ul li {
+main .mainArticle .advertisement ul li,
+main .rightAside ul li {
     width: 100%;
 }
 
-main .mainArticle .advertisement ul li a {
+main .mainArticle .advertisement ul li a,
+main .rightAside ul li figure a {
     display: flex;
     justify-content: center;
     margin: 2px 0;
+    text-decoration: none;
 }
 
-main .mainArticle .advertisement ul li a img {
+main .mainArticle .advertisement ul li a img,
+main .altAdvertisement #mobileAdvertisement img,
+main .rightAside ul li figure a img {
     width: 100%;
-    border: 1px solid violet;
     height: auto;
+}
+
+main .rightAside ul li figure a figcaption {
+    color: #777;
+    font-size: 12px;
+    margin: 2px;
 }
 
 main .mainArticle .advertisement #desktopAdvertisement {

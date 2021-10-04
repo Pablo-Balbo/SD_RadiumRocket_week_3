@@ -1,14 +1,8 @@
-header {
-    /* border: 1px solid blue; */
-}
-
 header .topHeader {
-    /* border: 1px solid green; */
     display: inline-flex
 }
 
 header .topHeader .logo {
-    /* border: 1px solid black; */
     display: flex;
     justify-content: center;
     width: 90%;
@@ -24,17 +18,13 @@ header .topHeader .login {
     align-items: center;
     justify-content: center;
     width: 10%;
-    /* border: 1px solid red; */
-}
-
-header .topHeader .login i {
-    /* border: 1px solid black; */
 }
 
 header .date {
-    /* border: 1px solid yellow; */
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    background-color: black;
+    color: #eee;
 }
 
 header .date span {
