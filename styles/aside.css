@@ -41,10 +41,11 @@ main .mainArticle .advertisement #desktopAdvertisement {
     display: none;
 }
 
+/* -----------------Tablet----------------- */
 @media screen and (min-width: 481px) {
 
 }
-
+/* -----------------Desktop----------------- */
 @media screen and (min-width: 769px) {
 
 }

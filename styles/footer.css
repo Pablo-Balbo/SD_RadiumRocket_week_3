@@ -102,10 +102,11 @@ footer .pageInfo .social .fa-linkedin:hover {
     opacity: 1;
 }
 
+/* -----------------Tablet----------------- */
 @media screen and (min-width: 481px) {
 
 }
-
+/* -----------------Desktop----------------- */
 @media screen and (min-width: 769px) {
 
 }
