@@ -1,5 +1,6 @@
 header {
     background-color: black;
+    font-family: 'Roboto', Verdana, Tahoma, sans-serif;
 }
 
 header .topHeader {
@@ -53,4 +54,12 @@ header .date span {
 
 section nav {
     display: none;
+}
+
+@media screen and (min-width: 481px) {
+
+}
+
+@media screen and (min-width: 769px) {
+
 }

@@ -1,3 +1,7 @@
+main {
+    font-family: 'Roboto', Verdana, Geneva, Tahoma, sans-serif;
+}
+
 main div.mainArticle {
     display: flex;
     flex-direction: column-reverse;
@@ -5,7 +9,6 @@ main div.mainArticle {
 
 main article {
     display: block;
-    font-family: 'Roboto', Verdana, Geneva, Tahoma, sans-serif
 }
 
 main article .news a {
@@ -35,9 +38,9 @@ main article .news a img {
 }
 
 main article .news figure span {
-    position: absolute;
+    position: relative;
     right: 0;
-    top: 280px;
+    top: 0px;
     background-color: #ccc;
     border-radius: 5px;
     width: 53px;
@@ -71,4 +74,12 @@ main article .news p {
     font-weight: 400;
     color: #333;
     padding: 15px;
+}
+
+@media screen and (min-width: 481px) {
+
+}
+
+@media screen and (min-width: 769px) {
+
 }

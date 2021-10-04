@@ -40,3 +40,11 @@ main .rightAside ul li figure a figcaption:hover {
 main .mainArticle .advertisement #desktopAdvertisement {
     display: none;
 }
+
+@media screen and (min-width: 481px) {
+
+}
+
+@media screen and (min-width: 769px) {
+
+}

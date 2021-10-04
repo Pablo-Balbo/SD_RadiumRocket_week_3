@@ -1,6 +1,7 @@
 footer {
     display: flex;
     flex-direction: column;
+    font-family: 'Roboto', Verdana, Tahoma, sans-serif;
 }
 
 footer .links1,
@@ -99,4 +100,12 @@ footer .pageInfo .social .fa-linkedin {
 
 footer .pageInfo .social .fa-linkedin:hover {
     opacity: 1;
+}
+
+@media screen and (min-width: 481px) {
+
+}
+
+@media screen and (min-width: 769px) {
+
 }
