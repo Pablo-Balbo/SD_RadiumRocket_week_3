@@ -36,7 +36,7 @@ main article .news a img {
 main article .news figcaption {
     color: #777;
     font-size: 12px;
-    margin: 2px;
+    margin: 2px 10px;
 }
 
 main article .news span {

@@ -1,0 +1,66 @@
+footer {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .links1,
+footer .links2,
+footer .pageInfo {
+    background-color: #000;
+    color: rgb(6, 6, 189);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+}
+
+footer .links1 h3,
+footer .links2 h3 {
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 20px;
+}
+
+footer .links1 a,
+footer .links2 a {
+    text-decoration: none;
+    line-height: 1.5;
+    color: #ccc;
+}
+
+footer .links1 a:hover,
+footer .links2 a:hover {
+    text-decoration: underline;
+}
+
+footer .pageInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .pageInfo h4 {
+    padding: 10px;
+    font-size: 16px;
+}
+
+footer .pageInfo .social {
+    display: flex;
+    justify-content: center;
+    width: 20%;
+}
+
+footer .pageInfo .social a {
+    text-decoration: none;
+    margin: 4px;
+}
+
+footer .pageInfo .social i {
+    width: 15px;
+}
+
+footer .pageInfo span {
+    padding: 10px;
+    font-size: 12px;
+}
