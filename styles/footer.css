@@ -7,11 +7,11 @@ footer .links1,
 footer .links2,
 footer .pageInfo {
     background-color: #000;
-    color: rgb(6, 6, 189);
+    color: rgb(46, 46, 184);
     display: flex;
     justify-content: center;
     text-align: center;
-
+    text-transform: capitalize;
 }
 
 footer .links1 h3,
@@ -63,4 +63,40 @@ footer .pageInfo .social i {
 footer .pageInfo span {
     padding: 10px;
     font-size: 12px;
+}
+
+footer .pageInfo .social .fa-facebook-square {
+    color: #3b5998;
+    opacity: 0.5;
+}
+
+footer .pageInfo .social .fa-facebook-square:hover {
+    opacity: 1;
+}
+
+footer .pageInfo .social .fa-twitter-square {
+    color: #00acee;
+    opacity: 0.5;
+}
+
+footer .pageInfo .social .fa-twitter-square:hover {
+    opacity: 1;
+}
+
+footer .pageInfo .social .fa-instagram {
+    color: #405de6;
+    opacity: 0.5;
+}
+
+footer .pageInfo .social .fa-instagram:hover {
+    opacity: 1;
+}
+
+footer .pageInfo .social .fa-linkedin {
+    color: #0e76a8;
+    opacity: 0.5;
+}
+
+footer .pageInfo .social .fa-linkedin:hover {
+    opacity: 1;
 }

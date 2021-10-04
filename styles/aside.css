@@ -2,12 +2,14 @@ main .mainArticle .advertisement ul,
 main .rightAside ul {
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 100%;
 }
 
 main .mainArticle .advertisement ul li,
 main .rightAside ul li {
-    width: 100%;
+    width: 95%;
+    height: auto;
 }
 
 main .mainArticle .advertisement ul li a,
@@ -29,6 +31,10 @@ main .rightAside ul li figure a figcaption {
     color: #777;
     font-size: 12px;
     margin: 2px;
+}
+
+main .rightAside ul li figure a figcaption:hover {
+    text-decoration: underline;
 }
 
 main .mainArticle .advertisement #desktopAdvertisement {
