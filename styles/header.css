@@ -16,6 +16,7 @@ header .topHeader .logo {
 
 header .topHeader .logo img {
     width: 25%;
+    margin: 10px;
 }
 
 header .topHeader .menu {
@@ -42,7 +43,7 @@ header .topHeader .login a i {
 
 header .date {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     color: #eee;
 }
 
@@ -57,10 +58,40 @@ section nav {
 }
 
 /* -----------------Tablet----------------- */
+
 @media screen and (min-width: 481px) {
-
+    header .date span {
+        font-size: 14px;
+    }
 }
-/* -----------------Desktop----------------- */
-@media screen and (min-width: 769px) {
 
+/* -----------------Desktop----------------- */
+
+@media screen and (min-width: 769px) {
+    section nav {
+        border: 1px solid blue;
+        display: block;
+        background-color: black;
+    }
+
+    section nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    section nav ul li {
+        border: 1px solid white;
+        padding: 15px;
+    }
+
+    section nav ul li a {
+        color: #eee;
+        text-transform: uppercase;
+        font-size: 12px;
+    }
+    
+    header .topHeader .menu {
+        display: none;
+    }
 }
