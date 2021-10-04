@@ -1,11 +1,11 @@
-main article {
-    border: 1px solid blue;
-    display: block;
-    font-family: Verdana, Tahoma, sans-serif;
+main div.mainArticle {
+    display: flex;
+    flex-direction: column-reverse;
 }
 
-main article .news {
- border: 1px solid forestgreen;
+main article {
+    display: block;
+    font-family: Verdana, Tahoma, sans-serif;
 }
 
 main article .news a {
@@ -40,7 +40,7 @@ main article .news figcaption {
 
 main article .news span {
     color: #777;
-    margin: 15px;
+    margin: 10px;
 }
 
 main article .news p {

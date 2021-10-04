@@ -1,0 +1,25 @@
+main .mainArticle .advertisement ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+main .mainArticle .advertisement ul li {
+    width: 100%;
+}
+
+main .mainArticle .advertisement ul li a {
+    display: flex;
+    justify-content: center;
+    margin: 2px 0;
+}
+
+main .mainArticle .advertisement ul li a img {
+    width: 100%;
+    border: 1px solid violet;
+    height: auto;
+}
+
+main .mainArticle .advertisement #desktopAdvertisement {
+    display: none;
+}
