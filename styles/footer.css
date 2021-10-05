@@ -2,10 +2,10 @@ footer {
     display: flex;
     flex-direction: column;
     font-family: 'Roboto', Verdana, Tahoma, sans-serif;
+    background-color: #000;
 }
 
-footer .links1,
-footer .links2,
+footer .links,
 footer .pageInfo {
     background-color: #000;
     color: rgb(46, 46, 184);
@@ -15,23 +15,20 @@ footer .pageInfo {
     text-transform: capitalize;
 }
 
-footer .links1 h3,
-footer .links2 h3 {
+footer .links h3 {
     font-size: 20px;
     font-weight: 600;
     text-transform: uppercase;
     margin: 20px;
 }
 
-footer .links1 a,
-footer .links2 a {
+footer .links a {
     text-decoration: none;
     line-height: 1.5;
     color: #ccc;
 }
 
-footer .links1 a:hover,
-footer .links2 a:hover {
+footer .links a:hover {
     text-decoration: underline;
 }
 
@@ -104,9 +101,21 @@ footer .pageInfo .social .fa-linkedin:hover {
 
 /* -----------------Tablet----------------- */
 @media screen and (min-width: 481px) {
+    footer .footerLinks {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 5px 0;
+    }
 
+    footer .pageInfo span {
+        font-size: 16px;
+    }
 }
 /* -----------------Desktop----------------- */
 @media screen and (min-width: 769px) {
-
+    footer {
+        flex-direction: row;
+        justify-content: space-around;
+    }
 }
