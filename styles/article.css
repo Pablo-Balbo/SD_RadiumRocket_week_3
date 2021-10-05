@@ -82,7 +82,13 @@ main article .news p {
 
 /* -----------------Tablet----------------- */
 @media screen and (min-width: 481px) {
+    main {
+        display: inline-flex;
+    }
 
+    main div.mainArticle {
+        flex-direction: row-reverse;
+    }
 }
 /* -----------------Desktop----------------- */
 @media screen and (min-width: 769px) {
