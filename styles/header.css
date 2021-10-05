@@ -5,6 +5,7 @@ header {
 
 header .topHeader {
     display: inline-flex;
+    justify-content: space-between;
 }
 
 header .topHeader .logo {
@@ -19,26 +20,28 @@ header .topHeader .logo img {
     margin: 10px;
 }
 
-header .topHeader .menu {
+header .topHeader .menu,
+header .topHeader .login {
     display: flex;
     align-items: center;
     padding: 15px;
 }
 
-header .topHeader .menu i {
+header .topHeader .menu i,
+header .topHeader .login a i {
+    font-size: 6vw;
     color: #eee;
 }
+
+header .topHeader .menu i span,
+header .topHeader .login a i span {
+    display: none;
+} 
 
 header .topHeader .login {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 10%;
-    margin-right: 10px;
-}
-
-header .topHeader .login a i {
-    color: #eee;
 }
 
 header .date {
@@ -63,15 +66,45 @@ section nav {
     header .date span {
         font-size: 14px;
     }
+
+    header .topHeader .logo {
+        width: 40%;
+    }
+
+    header .topHeader .logo img {
+        width: 40%;
+    }
+
+    header .topHeader .menu i,
+    header .topHeader .login a i {
+        display: inline-flex;
+        margin: 0px;
+        width: 100%;
+        font-size: 30px;
+    }
+
+    header .topHeader .login a i {
+        flex-direction: row-reverse;
+    }
+
+    header .topHeader .menu a i span,
+    header .topHeader .login a i span {
+        display: flex;
+        align-items: center;
+        margin: 0px 10px;
+        width: 50px;
+        font-size: 14px;
+        font-family: 'Roboto', sans-serif;
+        text-transform: uppercase;
+    }
 }
 
 /* -----------------Desktop----------------- */
 
 @media screen and (min-width: 769px) {
     section nav {
-        border: 1px solid blue;
         display: block;
-        background-color: black;
+        background-color: #000;
     }
 
     section nav ul {
@@ -81,7 +114,6 @@ section nav {
     }
 
     section nav ul li {
-        border: 1px solid white;
         padding: 15px;
     }
 
