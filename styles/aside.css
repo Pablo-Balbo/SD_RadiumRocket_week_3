@@ -34,13 +34,13 @@ main .rightAside ul li figure a {
 }
 
 main .mainArticle .advertisement ul li a img,
-main .altAdvertisement #mobileAdvertisement img,
+main .altAdvertisement .mobileAdvertisement img,
 main .rightAside ul li figure a img {
     width: 100%;
     height: auto;
 }
 
-main .altAdvertisement #mobileAdvertisement {
+main .altAdvertisement .mobileAdvertisement {
     list-style: none;
     margin-top: 40px;
     background-color: #000;
@@ -57,13 +57,44 @@ main .rightAside ul li figure a figcaption:hover {
     text-decoration: underline;
 }
 
+main .rightAside #tabletAdvertisement,
 main .mainArticle .advertisement #desktopAdvertisement {
     display: none;
 }
 
 /* -----------------Tablet----------------- */
 @media screen and (min-width: 481px) {
+    main {
+        display: flex;
+        flex-direction: column;
+    }
 
+    main .container {
+        display: inline-flex;
+    }
+
+    main .container .mainArticle {
+        margin: 0px 10px 0px 5px;
+    }
+
+    main .advertisement .mobileAdvertisement {
+        display: none;
+    }
+
+    main .rightAside #tabletAdvertisement {
+        display: block;
+        height: 100%;
+        width: auto;
+        margin-bottom: 50px;
+    }
+
+    main .rightAside figure {
+        border: 1px solid rgb(219, 219, 219);
+        border-radius: 5px;
+        padding: 10px;
+        background-image: linear-gradient(rgb(255, 255, 255), rgb(247, 247, 247));
+        box-shadow: 1px 1px 60px rgb(182, 182, 182);
+    }
 }
 /* -----------------Desktop----------------- */
 @media screen and (min-width: 769px) {
