@@ -40,9 +40,9 @@ main article .news a img {
 }
 
 main article .news figure span {
-    position: absolute;
-    right: -5px;
-    top: 340px;
+    position: relative;
+    right: 0px;
+    top: -35px;
     background-image: linear-gradient(rgb(46, 46, 46), rgb(19, 19, 19));
     border-radius: 5px;
     border: 1.5px solid #000;
