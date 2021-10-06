@@ -14,6 +14,7 @@ Finally, in response to the weekly problem proposed by Radium Rocket, the object
 ---
 
 The GitHub Pages link corresponding to the cover is as follows:
+
 https://pablo-balbo.github.io/SD_RadiumRocket_week_3/myPage.html
 
 ---
