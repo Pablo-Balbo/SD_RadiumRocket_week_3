@@ -106,6 +106,10 @@ section nav {
         margin-left: 30%;
     }
 
+    header .date {
+        padding-bottom: 10px;
+    }
+
     section nav {
         display: block;
         background-color: #000;
@@ -120,7 +124,7 @@ section nav {
     section nav ul li {
         height: 40px;
         width: 100%;
-        border: 1px solid #ccc;
+        border-top: 1px solid #ccc;
     }
 
     section nav ul li:hover {
@@ -137,6 +141,8 @@ section nav {
         display: flex;
         justify-content: center;
         align-items: center;
+        font-size: 18px;
+        font-weight: 600;
     }
     section nav ul li a:hover {
         color: #000;
