@@ -118,4 +118,9 @@ footer .pageInfo .social .fa-linkedin:hover {
         flex-direction: row;
         justify-content: space-around;
     }
+
+    footer .footerLinks .links {
+        font-size: 20px;
+        margin: 50px;
+    }
 }
