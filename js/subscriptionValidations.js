@@ -47,3 +47,23 @@ email.onfocus = function(){
         errorMessage[1].style.display = 'none';
     }
 };
+
+password.onblur = function(){
+    let passwordValue = password.value;
+    const characters = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])");
+    if(passwordValue.length < 8){
+        errorMessage[2].style.display = 'block';
+        errorMessage[2].innerText = 'Passowrd must have al least 8 characters';
+    } else if(characters.test(passwordValue) === false){
+        errorMessage[2].style.display = 'block';
+        errorMessage[2].innerText = 'Enter a lowercase, an uppercase and a number';
+    } else {
+        errorMessage[2].style.display = 'none';
+    }
+};
+
+password.onfocus = function(){
+    if(errorMessage[2].style.display === 'block'){
+        errorMessage[2].style.display = 'none';
+    }
+};
