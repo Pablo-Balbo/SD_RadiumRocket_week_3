@@ -3,10 +3,48 @@
     justify-content: center;
     flex-direction: column;
     padding: 25px;
+    border: 1px solid green;
 }
 
 form ul li {
     display: flex;
     flex-direction: column;
     margin: 8px 0;
+}
+
+form ul li label {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    text-transform: capitalize;
+}
+
+form ul li input {
+    border-radius: 2px;
+}
+
+form input[type=submit] {
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: #000;
+    border-radius: 5px;
+    text-decoration: none;
+    color: rgb(46, 46, 184);
+    padding: 20px 20px;
+    margin: 20px auto;
+    cursor: pointer;
+    width: 100px;
+    border: 1px solid yellow;
+}
+
+form input[type=submit]:hover {
+    background-color: rgb(46, 46, 184);
+    color: #000;
+}
+
+@media screen and (min-width: 769px) {
+    form ul {
+        display: flex;
+    }
 }
