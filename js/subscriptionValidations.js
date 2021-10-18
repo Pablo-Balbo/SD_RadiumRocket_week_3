@@ -67,3 +67,20 @@ password.onfocus = function(){
         errorMessage[2].style.display = 'none';
     }
 };
+
+confirmPassword.onblur = function(){
+    let passwordValue = password.value;
+    let confirmPasswordValue = confirmPassword.value;
+    if(passwordValue !== confirmPasswordValue){
+        errorMessage[3].style.display = 'block';
+        errorMessage[3].innerText = 'Passwords do not match';
+    } else {
+        errorMessage[3].style.display = 'none';
+    }
+};
+
+confirmPassword.onfocus = function(){
+    if(errorMessage[3].style.display === 'block'){
+        errorMessage[3].style.display = 'none';
+    }
+};

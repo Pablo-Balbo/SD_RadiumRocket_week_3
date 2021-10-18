@@ -27,7 +27,6 @@ form ul li span.errorMessage {
     display: none;
     font-size: 16px;
     font-weight: 600;
-    text-transform: capitalize;
     color: rgb(255, 0, 0);
     padding: 5px;
 }
