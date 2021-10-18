@@ -1,157 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-    <link rel="stylesheet" href="./styles/reset.css">
-    <link rel="stylesheet" href="./styles/header.css">
-    <link rel="stylesheet" href="./styles/footer.css">
-    <link rel="stylesheet" href="./styles/subscription.css">
-    <script src="./js/subscriptionValidations.js"></script>
-</head>
-<body>
-    <header>
-        <div class="topHeader">
-            <div class="home">
-                <a href="./myPage.html">
-                    <i>
-                        <span>home</span>
-                    </i>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Register</title>
+        <link rel="stylesheet" href="./styles/reset.css">
+        <link rel="stylesheet" href="./styles/header.css">
+        <link rel="stylesheet" href="./styles/footer.css">
+        <link rel="stylesheet" href="./styles/subscription.css">
+    </head>
+    <body>
+        <header>
+            <div class="topHeader">
+                <div class="home">
+                    <a href="./myPage.html">
+                        <i>
+                            <span>home</span>
+                        </i>
+                    </a>
+                </div>
+                <a href="#" class="logo">
+                    <img src="./img/rocket_news.png" alt="rocket-news">
                 </a>
             </div>
-            <a href="#" class="logo">
-                <img src="./img/rocket_news.png" alt="rocket-news">
-            </a>
-        </div>
-    </header>
-    <main>
-        <form id="form">
-            <div class="formColumn">
-                <ul>
-                    <li>
-                        <label for="fullName">full name</label>
-                        <input type="text" id="fullName">
-                        <div class="error"></div>
-                    </li>
-                    <li>
-                        <label for="email">email</label>
-                        <input type="email" id="email">
-                        <div class="error"></div>
-                    </li>
-                    <li>
-                        <label for="password">password</label>
-                        <input type="password" id="password">
-                        <div class="error"></div>
-                    </li>
-                    <li>
-                        <label for="confirmPassword">confirm password</label>
-                        <input type="password" id="confirmPassword">
-                        <div class="error"></div>
-                    </li>
-                    <li>
-                        <label for="age">age</label>
-                        <input type="number" id="age">
-                        <div class="error"></div>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <label for="phoneNumber">phone number</label>
-                        <input type="number" id="phoneNumber">
-                        <div class="error"></div>
-                    </li>
-                    <li>
-                        <label for="address">address</label>
-                        <input type="text" id="address">
-                        <div class="error"></div>
-                    </li>
-                    <li>
-                        <label for="city">city</label>
-                        <input type="text" id="city">
-                        <div class="error"></div>
-                    </li>
-                    <li>
-                        <label for="postalCode">postal code</label>
-                        <input type="text" id="postalCode">
-                        <div class="error"></div>
-                    </li>
-                    <li>
-                        <label for="dni">DNI</label>
-                        <input type="number" id="dni">
-                        <div class="error"></div>
-                    </li>
-                </ul>
+        </header>
+        <main>
+            <form id="form">
+                <div class="formColumn">
+                    <ul>
+                        <li>
+                            <label for="fullName">full name</label>
+                            <input type="text" id="fullName">
+                            <span class="errorMessage"></span>
+                        </li>
+                        <li>
+                            <label for="email">email</label>
+                            <input type="email" id="email">
+                            <span class="errorMessage"></span>
+                        </li>
+                        <li>
+                            <label for="password">password</label>
+                            <input type="password" id="password">
+                            <span class="errorMessage"></span>
+                        </li>
+                        <li>
+                            <label for="confirmPassword">confirm password</label>
+                            <input type="password" id="confirmPassword">
+                            <span class="errorMessage"></span>
+                        </li>
+                        <li>
+                            <label for="age">age</label>
+                            <input type="number" id="age">
+                            <span class="errorMessage"></span>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <label for="phoneNumber">phone number</label>
+                            <input type="number" id="phoneNumber">
+                            <span class="errorMessage"></span>
+                        </li>
+                        <li>
+                            <label for="address">address</label>
+                            <input type="text" id="address">
+                            <span class="errorMessage"></span>
+                        </li>
+                        <li>
+                            <label for="city">city</label>
+                            <input type="text" id="city">
+                            <span class="errorMessage"></span>
+                        </li>
+                        <li>
+                            <label for="postalCode">postal code</label>
+                            <input type="text" id="postalCode">
+                            <span class="errorMessage"></span>
+                        </li>
+                        <li>
+                            <label for="dni">DNI</label>
+                            <input type="number" id="dni">
+                            <span class="errorMessage"></span>
+                        </li>
+                    </ul>
+                </div>
+                <input type="submit" value="send" id="sendForm">
+            </form>
+        </main>
+        <footer>
+            <div class="footerLinks">
+                <div class="links">
+                    <ul>
+                        <li>
+                            <h3>tecnology</h3>
+                        </li>
+                        <li>
+                            <a href="#">GSM-Arena</a>
+                        </li>
+                        <li>
+                            <a href="#">Techadvisor</a>
+                        </li>
+                        <li>
+                            <a href="#">Techradar</a>
+                        </li>
+                        <li>
+                            <a href="#">PCMag</a>
+                        </li>
+                        <li>
+                            <a href="#">Xataka</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="links">
+                    <ul>
+                        <li>
+                            <h3>sports</h3>
+                        </li>
+                        <li>
+                            <a href="#">football</a>
+                        </li>
+                        <li>
+                            <a href="#">basquetball</a>
+                        </li>
+                        <li>
+                            <a href="#">tennis</a>
+                        </li>
+                        <li>
+                            <a href="#">volley</a>
+                        </li>
+                        <li>
+                            <a href="#">swim</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <input type="submit" value="send" id="sendForm">
-        </form>
-    </main>
-    <footer>
-        <div class="footerLinks">
-            <div class="links">
-                <ul>
-                    <li>
-                        <h3>tecnology</h3>
-                    </li>
-                    <li>
-                        <a href="#">GSM-Arena</a>
-                    </li>
-                    <li>
-                        <a href="#">Techadvisor</a>
-                    </li>
-                    <li>
-                        <a href="#">Techradar</a>
-                    </li>
-                    <li>
-                        <a href="#">PCMag</a>
-                    </li>
-                    <li>
-                        <a href="#">Xataka</a>
-                    </li>
-                </ul>
+            <div class="pageInfo">
+                <h4>Rocket news 2021</h4>
+                <div class="social">
+                    <a href="#">
+                        <i class="fab fa-facebook-square"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-twitter-square"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+                <span>&copy All rights reserved</span>
             </div>
-            <div class="links">
-                <ul>
-                    <li>
-                        <h3>sports</h3>
-                    </li>
-                    <li>
-                        <a href="#">football</a>
-                    </li>
-                    <li>
-                        <a href="#">basquetball</a>
-                    </li>
-                    <li>
-                        <a href="#">tennis</a>
-                    </li>
-                    <li>
-                        <a href="#">volley</a>
-                    </li>
-                    <li>
-                        <a href="#">swim</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="pageInfo">
-            <h4>Rocket news 2021</h4>
-            <div class="social">
-                <a href="#">
-                    <i class="fab fa-facebook-square"></i>
-                </a>
-                <a href="#">
-                    <i class="fab fa-twitter-square"></i>
-                </a>
-                <a href="#">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="#">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-            </div>
-            <span>&copy All rights reserved</span>
-        </div>
-    </footer>
-</body>
+        </footer>
+        <script src="./js/subscriptionValidations.js"></script>
+    </body>
 </html>
