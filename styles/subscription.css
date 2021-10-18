@@ -3,7 +3,6 @@
     justify-content: center;
     flex-direction: column;
     padding: 25px;
-    border: 1px solid green;
 }
 
 form ul li {
@@ -20,7 +19,8 @@ form ul li label {
 }
 
 form ul li input {
-    border-radius: 2px;
+    border-radius: 4px;
+    padding: 5px;
 }
 
 form input[type=submit] {
@@ -35,7 +35,7 @@ form input[type=submit] {
     margin: 20px auto;
     cursor: pointer;
     width: 100px;
-    border: 1px solid yellow;
+    border: 1px solid rgb(46, 46, 184);
 }
 
 form input[type=submit]:hover {
@@ -44,7 +44,18 @@ form input[type=submit]:hover {
 }
 
 @media screen and (min-width: 769px) {
-    form ul {
+    form .formColumn {
         display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    form ul {
+        width: 500px;
+        padding: 30px;
+    }
+
+    form ul li label {
+        font-size: 25px;
     }
 }
