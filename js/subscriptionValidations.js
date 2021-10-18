@@ -1,5 +1,4 @@
-const form = document.getElementById('form'),
-      fullName = document.getElementById('fullName'),
+const fullName = document.getElementById('fullName'),
       email = document.getElementById('email'),
       password = document.getElementById('password'),
       confirmPassword = document.getElementById('confirmPassword'),
@@ -30,5 +29,21 @@ fullName.onblur = function() {
 fullName.onfocus = function() {
     if(errorMessage[0].style.display === 'block') {
         errorMessage[0].style.display = 'none';
+    }
+};
+
+email.onblur = function(){
+    const emailConditions = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if(emailConditions.test(email.value) === false){
+        errorMessage[1].style.display = 'block';
+        errorMessage[1].innerText = 'Enter a valid email';
+    } else {
+        errorMessage[1].style.display = 'none';
+    }
+};
+
+email.onfocus = function(){
+    if(errorMessage[1].style.display === 'block'){
+        errorMessage[1].style.display = 'none';
     }
 };
