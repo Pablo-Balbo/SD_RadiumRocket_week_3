@@ -32,7 +32,7 @@ fullName.onfocus = function() {
 
 email.onblur = function() {
     const emailConditions = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    if(emailConditions.test(email.value) === false) {
+    if(!emailConditions.test(email.value)) {
         errorMessage[1].style.display = 'block';
         errorMessage[1].innerText = 'Enter a valid email';
     }
@@ -50,7 +50,7 @@ password.onblur = function() {
     if(passwordValue.length < 8) {
         errorMessage[2].style.display = 'block';
         errorMessage[2].innerText = 'Passowrd must have al least 8 characters';
-    } else if(characters.test(passwordValue) === false) {
+    } else if(!characters.test(passwordValue)) {
         errorMessage[2].style.display = 'block';
         errorMessage[2].innerText = 'Enter a lowercase, an uppercase and a number';
     }
@@ -89,4 +89,26 @@ age.onfocus = function() {
     if(errorMessage[4].style.display === 'block') {
         errorMessage[4].style.display = 'none';
     }
-}
+};
+
+phoneNumber.onblur = function() {
+    let phoneNumberValue = phoneNumber.value;
+    const specialCharacters = [' ', '(', ')', '-'];
+    for (let i=0; i < specialCharacters.length; i++) {
+        console.log(phoneNumberValue.includes(specialCharacters[i]))
+        if(phoneNumberValue.includes(specialCharacters[i])) {
+            errorMessage[5].style.display = 'block';
+            errorMessage[5].innerText = 'Must have numbers only';
+            return;
+        } else if(phoneNumberValue.length < 7) {
+            errorMessage[5].style.display = 'block';
+            errorMessage[5].innerText = 'Must have more than 6 digits';
+        }
+    }
+};
+
+phoneNumber.onfocus = function() {
+    if(errorMessage[5].style.display === 'block') {
+        errorMessage[5].style.display = 'none';
+    }
+};
