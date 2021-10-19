@@ -7,7 +7,7 @@ const fullName = document.getElementById('fullName'),
       address = document.getElementById('address'),
       city = document.getElementById('city'),
       zipCode = document.getElementById('zipCode'),
-      dni = document.getElementById('dni'),
+      id = document.getElementById('id'),
       sendForm = document.getElementById('sendForm');
 
 let errorMessage = document.getElementsByClassName('errorMessage');
@@ -78,8 +78,8 @@ confirmPassword.onfocus = function() {
 };
 
 age.onblur = function() {
-    let ageValue = age.value;
-    if(parseInt(ageValue, 10) < 18 ||  !Number.isInteger(parseInt(ageValue, 10))) {
+    let ageValue = parseInt(age.value, 0);
+    if(ageValue < 18 ||  !Number.isInteger(ageValue)) {
         errorMessage[4].style.display = 'block';
         errorMessage[4].innerText = 'Age must be equal or greater than 18';
     }
@@ -158,5 +158,19 @@ zipCode.onblur = function() {
 zipCode.onfocus = function() {
     if(errorMessage[8].style.display === 'block') {
         errorMessage[8].style.display = 'none';
+    }
+};
+
+id.onblur = function() {
+    let idValue = id.value;
+    if(idValue.length < 7 || idValue.length > 8) {
+        errorMessage[9].style.display = 'block';
+        errorMessage[9].innerText = 'Id must have between 7 and 8 digits';
+    }
+}
+
+id.onfocus = function() {
+    if(errorMessage[9].style.display === 'block') {
+        errorMessage[9].style.display = 'none';
     }
 };
