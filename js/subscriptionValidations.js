@@ -49,7 +49,7 @@ password.onblur = function() {
     const characters = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])");
     if(passwordValue.length < 8) {
         errorMessage[2].style.display = 'block';
-        errorMessage[2].innerText = 'Passowrd must have al least 8 characters';
+        errorMessage[2].innerText = 'Passowrd must have at least 8 characters';
     } else if(!characters.test(passwordValue)) {
         errorMessage[2].style.display = 'block';
         errorMessage[2].innerText = 'Enter a lowercase, an uppercase and a number';
@@ -95,7 +95,6 @@ phoneNumber.onblur = function() {
     let phoneNumberValue = phoneNumber.value;
     const specialCharacters = [' ', '(', ')', '-'];
     for (let i=0; i < specialCharacters.length; i++) {
-        console.log(phoneNumberValue.includes(specialCharacters[i]))
         if(phoneNumberValue.includes(specialCharacters[i])) {
             errorMessage[5].style.display = 'block';
             errorMessage[5].innerText = 'Must have numbers only';
@@ -110,5 +109,26 @@ phoneNumber.onblur = function() {
 phoneNumber.onfocus = function() {
     if(errorMessage[5].style.display === 'block') {
         errorMessage[5].style.display = 'none';
+    }
+};
+
+address.onblur = function() {
+    let addressValue = address.value;
+    const characters = new RegExp("^(?=.*[A-z])(?=.*[0-9])");
+    if(addressValue.length < 5) {
+        errorMessage[6].style.display = 'block';
+        errorMessage[6].innerText = 'Address must have at least 5 characters';
+    } else if(!characters.test(addressValue)) {
+        errorMessage[6].style.display = 'block';
+        errorMessage[6].innerText = 'Must use letters and numbers';
+    } else if(!addressValue.includes(' ')) {
+        errorMessage[6].style.display = 'block';
+        errorMessage[6].innerText = 'Must have a blank space between street´s name and number';
+    }
+}
+
+address.onfocus = function() {
+    if(errorMessage[6].style.display === 'block') {
+        errorMessage[6].style.display = 'none';
     }
 };
