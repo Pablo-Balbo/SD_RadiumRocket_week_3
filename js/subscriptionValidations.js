@@ -6,7 +6,7 @@ const fullName = document.getElementById('fullName'),
       phoneNumber = document.getElementById('phoneNumber'),
       address = document.getElementById('address'),
       city = document.getElementById('city'),
-      postalCode = document.getElementById('postalCode'),
+      zipCode = document.getElementById('zipCode'),
       dni = document.getElementById('dni'),
       sendForm = document.getElementById('sendForm');
 
@@ -144,5 +144,19 @@ city.onblur = function() {
 city.onfocus = function() {
     if(errorMessage[7].style.display === 'block') {
         errorMessage[7].style.display = 'none';
+    }
+};
+
+zipCode.onblur = function() {
+    let zipCodeValue = zipCode.value;
+    if(zipCodeValue.length < 3) {
+        errorMessage[8].style.display = 'block';
+        errorMessage[8].innerText = 'Zip code must have at least 3 characters';
+    }
+}
+
+zipCode.onfocus = function() {
+    if(errorMessage[8].style.display === 'block') {
+        errorMessage[8].style.display = 'none';
     }
 };
