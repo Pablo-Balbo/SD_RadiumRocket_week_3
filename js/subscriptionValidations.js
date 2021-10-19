@@ -132,3 +132,17 @@ address.onfocus = function() {
         errorMessage[6].style.display = 'none';
     }
 };
+
+city.onblur = function() {
+    let cityValue = city.value;
+    if(cityValue.length < 3) {
+        errorMessage[7].style.display = 'block';
+        errorMessage[7].innerText = 'City must have at least 3 characters';
+    }
+}
+
+city.onfocus = function() {
+    if(errorMessage[7].style.display === 'block') {
+        errorMessage[7].style.display = 'none';
+    }
+};
