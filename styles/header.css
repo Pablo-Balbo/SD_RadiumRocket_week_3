@@ -60,6 +60,14 @@ section nav {
     display: none;
 }
 
+.subscriptionHeader {
+    flex-direction: row-reverse;
+}
+
+.subscriptionLogo {
+    justify-content: flex-start !important;
+}
+
 /* -----------------Tablet----------------- */
 
 @media screen and (min-width: 481px) {
@@ -151,6 +159,4 @@ section nav {
     header .topHeader .menu {
         display: none;
     }
-
-    
 }
