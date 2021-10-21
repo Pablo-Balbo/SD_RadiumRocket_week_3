@@ -9,9 +9,15 @@ const fullName = document.getElementById('fullName'),
       zipCode = document.getElementById('zipCode'),
       id = document.getElementById('id'),
       form = document.getElementById('form'),
-      submit = document.getElementById('submit');
+      submit = document.getElementById('submit'),
+      title = document.getElementById('title');
 
 let errorMessage = document.getElementsByClassName('errorMessage');
+
+let titleValue = '';
+fullName.onkeyup = function() {
+    title.innerText =  titleValue + fullName.value;
+};
 
 var fullNameMessage = '';
 fullName.onblur = function() {
@@ -22,7 +28,7 @@ fullName.onblur = function() {
         fullNameMessage = 'Name must be more than 6 characters \n';
     } else if(fullNameValue.indexOf(' ') === -1) {
         errorMessage[0].style.display = 'block';
-        errorMessage[0].innerHTML = 'Name must have a blank space';
+        errorMessage[0].innerText = 'Name must have a blank space';
         fullNameMessage = 'Name must have a blank space \n';
     } else {
         fullNameMessage = `Full name: ${fullNameValue} \n`;
@@ -33,6 +39,7 @@ fullName.onfocus = function() {
     if(errorMessage[0].style.display === 'block') {
         errorMessage[0].style.display = 'none';
     }
+    titleValue = title.innerHTML;
 };
 
 var emailMessage = '';
