@@ -14,6 +14,16 @@ const fullName = document.getElementById('fullName'),
 
 let errorMessage = document.getElementsByClassName('errorMessage');
 
+let fullNameValue = '',
+    emailValue = '',
+    passwordValue = '',
+    ageValue = '',
+    phoneNumberValue = '',
+    addressValue = '',
+    cityValue = '',
+    zipCodeValue = '',
+    idValue = '';
+
 let titleValue = '';
 fullName.onkeyup = function() {
     title.innerText =  titleValue + fullName.value;
@@ -21,7 +31,7 @@ fullName.onkeyup = function() {
 
 var fullNameMessage = '';
 fullName.onblur = function() {
-    let fullNameValue = fullName.value;
+    fullNameValue = fullName.value;
     if(fullNameValue.length <= 6) {
         errorMessage[0].style.display = 'block';
         errorMessage[0].innerText = 'Name must be more than 6 characters';
@@ -44,7 +54,7 @@ fullName.onfocus = function() {
 
 var emailMessage = '';
 email.onblur = function() {
-    let emailValue = email.value;
+    emailValue = email.value;
     const emailConditions = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if(!emailConditions.test(emailValue)) {
         errorMessage[1].style.display = 'block';
@@ -62,7 +72,6 @@ email.onfocus = function(){
 };
 
 var passwordMessage = '';
-var passwordValue = '';
 password.onblur = function() {
     const characters = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])");
     passwordValue = password.value;
@@ -106,7 +115,7 @@ confirmPassword.onfocus = function() {
 
 var ageMessage = '';
 age.onblur = function() {
-    let ageValue = parseInt(age.value, 0);
+    ageValue = parseInt(age.value, 0);
     if(ageValue < 18 ||  !Number.isInteger(ageValue)) {
         errorMessage[4].style.display = 'block';
         errorMessage[4].innerText = 'Age must be equal or greater than 18';
@@ -124,7 +133,7 @@ age.onfocus = function() {
 
 var phoneNumberMessage = '';
 phoneNumber.onblur = function() {
-    let phoneNumberValue = phoneNumber.value;
+    phoneNumberValue = phoneNumber.value;
     const specialCharacters = [' ', '(', ')', '-'];
     for (let i=0; i < specialCharacters.length; i++) {
         if(phoneNumberValue.includes(specialCharacters[i])) {
@@ -150,7 +159,7 @@ phoneNumber.onfocus = function() {
 
 var addressMessage = '';
 address.onblur = function() {
-    let addressValue = address.value;
+    addressValue = address.value;
     const characters = new RegExp("^(?=.*[A-z])(?=.*[0-9])");
     if(addressValue.length < 5) {
         errorMessage[6].style.display = 'block';
@@ -177,7 +186,7 @@ address.onfocus = function() {
 
 var cityMessage = '';
 city.onblur = function() {
-    let cityValue = city.value;
+    cityValue = city.value;
     if(cityValue.length < 3) {
         errorMessage[7].style.display = 'block';
         errorMessage[7].innerText = 'City must have at least 3 characters';
@@ -195,7 +204,7 @@ city.onfocus = function() {
 
 var zipCodeMessage = '';
 zipCode.onblur = function() {
-    let zipCodeValue = zipCode.value;
+    zipCodeValue = zipCode.value;
     if(zipCodeValue.length < 3) {
         errorMessage[8].style.display = 'block';
         errorMessage[8].innerText = 'Zip code must have at least 3 characters';
@@ -213,7 +222,7 @@ zipCode.onfocus = function() {
 
 var idMessage = '';
 id.onblur = function() {
-    let idValue = id.value;
+    idValue = id.value;
     if(idValue.length < 7 || idValue.length > 8) {
         errorMessage[9].style.display = 'block';
         errorMessage[9].innerText = 'Id must have between 7 and 8 digits';
@@ -230,8 +239,31 @@ id.onfocus = function() {
 };
 
 form.onsubmit = function(e) {
+    if (e && "preventDefault" in e) 
+        e.preventDefault();
     const alertMessage = `${fullNameMessage} \n ${emailMessage} \n ${passwordMessage} \n ${passwordConfirmMessage} \n ${ageMessage} \n ${phoneNumberMessage} \n ${addressMessage} \n ${cityMessage} \n ${zipCodeMessage} \n ${idMessage} \n `;
     alert(alertMessage);
-    e.preventDefault();
+    let url = `http://curso-dev-2021.herokuapp.com/newsletter?`
+    + `name=` + encodeURIComponent(`${fullNameValue}`) + `&`
+    + `email=` + encodeURIComponent(`${emailValue}`) + `&`
+    + `password=` + encodeURIComponent(`${passwordValue}`) + `&`
+    + `age=` + encodeURIComponent(`${ageValue}`) + `&`
+    + `phone_number=` + encodeURIComponent(`${phoneNumberValue}`) + `&`
+    + `address=` + encodeURIComponent(`${addressValue}`) + `&`
+    + `city=` + encodeURIComponent(`${cityValue}`) + `&`
+    + `zip_code=` + encodeURIComponent(`${zipCodeValue}`) + `&`
+    + `id=` + encodeURIComponent(`${idValue}`);
+ 
+    fetch(url)
+    .then(response => {
+        if(response.status === 200) {
+           return `Newsletter subscription successful: \n` + response.json();
+        } else {
+           return `Newsletter subscription failure: \n` + response.statusText;
+        }
+    })
+    .then(info => console.log(info))
+    .catch(function(error) {
+        console.log('Error trying to send the data: ' + error)
+    });
 };
-
