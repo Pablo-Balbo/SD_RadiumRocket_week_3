@@ -10,7 +10,10 @@ const fullName = document.getElementById('fullName'),
       id = document.getElementById('id'),
       form = document.getElementById('form'),
       submit = document.getElementById('submit'),
-      title = document.getElementById('title');
+      title = document.getElementById('title'),
+      modal = document.getElementById('modal'),
+      modalClose = document.getElementById('modalClose'),
+      span = document.getElementById('subscriptionResult');
 
 let errorMessage = document.getElementsByClassName('errorMessage');
 
@@ -257,13 +260,22 @@ form.onsubmit = function(e) {
     fetch(url)
     .then(response => {
         if(response.status === 200) {
+            console.log(response.json());
            return `Newsletter subscription successful: \n` + response.json();
         } else {
            return `Newsletter subscription failure: \n` + response.statusText;
         }
     })
-    .then(info => console.log(info))
+    .then(info => {
+        span.innerText = info;
+        modal.style.display = 'block';
+        return false;
+    })
     .catch(function(error) {
         console.log('Error trying to send the data: ' + error)
     });
 };
+
+modalClose.addEventListener('click', function() {
+    modal.style.display = 'none';
+});
