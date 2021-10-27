@@ -268,11 +268,13 @@ form.onsubmit = function(e) {
     })
     .then(info => {
         span.innerText = info;
-        modal.style.display = 'block';
-        return false;
+        modal.style.display = 'flex';
     })
     .catch(function(error) {
         console.log('Error trying to send the data: ' + error)
+        span.innerText = error;
+        modal.style.display = 'flex';
+        return false;
     });
 };
 
