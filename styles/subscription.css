@@ -76,25 +76,25 @@ form input[type=submit]:hover {
 }
 
 #modal {
-    background: linear-gradient(0deg,white 70%, crimson 30%);
+    background: linear-gradient(0deg,#eee 70%, rgb(46, 46, 184) 30%);
     width: 600px;
     height: 300px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     position: absolute;
-    display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     border-radius: 30px;
+    display: none;
 }
 
 #modalClose {
     background: #eee;
     position: absolute;
     right: -20px;
-    color: crimson;
+    color: rgb(46, 46, 184);
     top: -20px;
     width: 40px;
     height: 40px;
@@ -106,12 +106,15 @@ form input[type=submit]:hover {
 }
 
 #modalTitle {
-    color: #eee;
+    color: #000;
     font-size: 40px;
+    font-weight: 600;
+    padding-top: 20px;
+    text-transform: capitalize;
 }
 
 #modalMessage {
-    padding: 10px 30px;
+    padding: 80px 30px;
 }
 
 #modal #subscriptionResult {
