@@ -256,26 +256,40 @@ form.onsubmit = function(e) {
     + `city=` + encodeURIComponent(`${cityValue}`) + `&`
     + `zip_code=` + encodeURIComponent(`${zipCodeValue}`) + `&`
     + `id=` + encodeURIComponent(`${idValue}`);
- 
+
     fetch(url)
     .then(response => {
         if(response.status === 200) {
-            console.log(response.json());
-           return `Newsletter subscription successful: \n` + response.json();
-        } else {
-           return `Newsletter subscription failure: \n` + response.statusText;
+            return response.json();
+        //     console.log(response.json());
+        //    return `Newsletter subscription successful: \n` + JSON.stringify(response.json());
+        // } else {
+        //    return `Newsletter subscription failure: \n` + response.statusText;
         }
     })
     .then(info => {
-        span.innerText = info;
+        span.innerText = `Newsletter subscription successful: \n` + JSON.stringify(info);
         modal.style.display = 'flex';
+        setItemsOnLocalStorage();
     })
     .catch(function(error) {
         console.log('Error trying to send the data: ' + error)
         span.innerText = error;
         modal.style.display = 'flex';
-        return false;
+        // return false;
     });
+
+    function setItemsOnLocalStorage() {
+        localStorage.setItem('Usuario', `${fullNameValue}`);
+        localStorage.setItem('Email', `${emailValue}`);
+        localStorage.setItem('Password', `${passwordValue}`);
+        localStorage.setItem('Age', `${ageValue}`);
+        localStorage.setItem('Phone number', `${phoneNumberValue}`);
+        localStorage.setItem('Address', `${addressValue}`);
+        localStorage.setItem('City', `${cityValue}`);
+        localStorage.setItem('Zip Code', `${zipCodeValue}`);
+        localStorage.setItem('ID', `${idValue}`);
+    };
 };
 
 modalClose.addEventListener('click', function() {
